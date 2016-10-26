@@ -1,0 +1,52 @@
+{
+  "id": "edlab_security_groups",
+  "viewports": [
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Library Apps VPC",
+      "url": "http://ci.tc-library.org/job/AWS%20Analysis/HTML_Report/LibraryApps.html",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "document"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "onBefore.js",
+      "onReadyScript": "onReady.js"
+    },
+    {
+      "label": "EdLab Apps VPC",
+      "url": "http://ci.tc-library.org/job/AWS%20Analysis/HTML_Report/EdLabApps.html",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "document"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "onBefore.js",
+      "onReadyScript": "onReady.js"
+    }
+
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "casper_scripts": "backstop_data/casper_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "casperFlags": [],
+  "engine": "phantomjs",
+  "report": ["browser"],
+  "debug": false
+}
